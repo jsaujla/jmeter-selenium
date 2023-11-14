@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.2">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan - True Client Performance Tests" enabled="true">
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL</stringProp>
+            <stringProp name="Argument.value">https://buggy.justtestit.org</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="MAX_WAIT_TIME" elementType="Argument">
+            <stringProp name="Argument.name">MAX_WAIT_TIME</stringProp>
+            <stringProp name="Argument.value">120</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+        <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+        <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+        <stringProp name="WebDriverConfig.driver_path">jmeter-selenium\browser-driver\chromedriver.exe</stringProp>
+        <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+        <boolProp name="WebDriverConfig.headless">false</boolProp>
+        <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+        <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
+        <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
+        <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+        <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+        <stringProp name="WebDriverConfig.http_host"></stringProp>
+        <intProp name="WebDriverConfig.http_port">8080</intProp>
+        <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+        <stringProp name="WebDriverConfig.https_host"></stringProp>
+        <intProp name="WebDriverConfig.https_port">8080</intProp>
+        <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+        <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+        <stringProp name="WebDriverConfig.socks_host"></stringProp>
+        <intProp name="WebDriverConfig.socks_port">8080</intProp>
+        <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+        <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+      </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+      <hashTree/>
+      <com.googlecode.jmeter.plugins.webdriver.config.EdgeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.EdgeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.EdgeDriverConfig" testname="jp@gc - Edge Driver Config" enabled="false">
+        <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+        <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+        <stringProp name="WebDriverConfig.driver_path">jmeter-selenium\browser-driver\msedgedriver.exe</stringProp>
+        <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+        <boolProp name="WebDriverConfig.headless">false</boolProp>
+        <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+        <stringProp name="EdgeDriverConfig.additional_args"></stringProp>
+        <stringProp name="EdgeDriverConfig.binary_path"></stringProp>
+        <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+        <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+        <stringProp name="WebDriverConfig.http_host"></stringProp>
+        <intProp name="WebDriverConfig.http_port">8080</intProp>
+        <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+        <stringProp name="WebDriverConfig.https_host"></stringProp>
+        <intProp name="WebDriverConfig.https_port">8080</intProp>
+        <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+        <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+        <stringProp name="WebDriverConfig.socks_host"></stringProp>
+        <intProp name="WebDriverConfig.socks_port">8080</intProp>
+        <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+        <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+      </com.googlecode.jmeter.plugins.webdriver.config.EdgeDriverConfig>
+      <hashTree/>
+      <com.googlecode.jmeter.plugins.webdriver.config.RemoteDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.RemoteDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.RemoteDriverConfig" testname="jp@gc - Remote Driver Config" enabled="false">
+        <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+        <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+        <boolProp name="WebDriverConfig.headless">false</boolProp>
+        <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+        <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
+        <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
+        <stringProp name="EdgeDriverConfig.additional_args"></stringProp>
+        <stringProp name="EdgeDriverConfig.binary_path"></stringProp>
+        <boolProp name="FirefoxDriverConfig.general.useragent.override.enabled">false</boolProp>
+        <boolProp name="FirefoxDriverConfig.network.negotiate-auth.allow-insecure-ntlm-v1">false</boolProp>
+        <collectionProp name="FirefoxDriverConfig.general.extensions"/>
+        <collectionProp name="FirefoxDriverConfig.general.preferences"/>
+        <intProp name="InternetExplorerDriverConfig.file_upload_dialog_timeout">1000</intProp>
+        <boolProp name="InternetExplorerDriverConfig.ensure_clean_session">false</boolProp>
+        <boolProp name="InternetExplorerDriverConfig.ignore_protected_mode">false</boolProp>
+        <boolProp name="InternetExplorerDriverConfig.silent">false</boolProp>
+        <stringProp name="InternetExplorerDriverConfig.initial_browser_url">https://www.bing.com/</stringProp>
+        <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+        <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+        <stringProp name="WebDriverConfig.http_host"></stringProp>
+        <intProp name="WebDriverConfig.http_port">8080</intProp>
+        <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+        <stringProp name="WebDriverConfig.https_host"></stringProp>
+        <intProp name="WebDriverConfig.https_port">8080</intProp>
+        <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+        <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+        <stringProp name="WebDriverConfig.socks_host"></stringProp>
+        <intProp name="WebDriverConfig.socks_port">8080</intProp>
+        <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+        <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+        <stringProp name="RemoteDriverConfig.general.selenium.grid.url"></stringProp>
+        <stringProp name="RemoteDriverConfig.general.selenium.capability">CHROME</stringProp>
+        <boolProp name="RemoteDriverConfig.general.selenium.file.detector">false</boolProp>
+      </com.googlecode.jmeter.plugins.webdriver.config.RemoteDriverConfig>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <boolProp name="ThreadGroup.delayedStart">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="InvalidRegisterScenario" enabled="true">
+          <stringProp name="WebDriverSampler.script">//##### DYNAMIC VALUES FROM &apos;User Defined Variables&apos; #####
+var maxWaitTime = WDS.vars.get(&quot;MAX_WAIT_TIME&quot;);
+var registerUrl = WDS.vars.get(&quot;BASE_URL&quot;) + &quot;/register&quot;;
+
+//##### Selenium WebDriver Imports #####
+var selenium = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui);
+var wait = new selenium.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(maxWaitTime));
+var select = JavaImporter(org.openqa.selenium.support.ui.Select);
+var actions = new org.openqa.selenium.interactions.Actions(WDS.browser);
+
+//##### JavaScript Reusable Methods #####
+
+function sleep(milliSeconds) {
+    var e = new Date().getTime() + (milliSeconds);
+    while (new Date().getTime() &lt;= e) {};
+}
+
+function getCurrentDateAndTime() {
+     var currentDate = new Date();
+     var year = currentDate.getFullYear();
+     var month = currentDate.getMonth() + 1;
+     var day = currentDate.getDate();
+     var hours = currentDate.getHours();
+     var minutes = currentDate.getMinutes();
+     var seconds = currentDate.getSeconds();
+     //var milliseconds = currentDate.getMilliseconds();
+     return year + &quot;&quot; + month + &quot;&quot; + day + &quot;&quot; + hours + &quot;&quot; + minutes + &quot;&quot; + seconds;
+}
+
+function getCurrentDateAsDDMMYYYY() {
+     var currentDate = new Date();
+     var year = currentDate.getFullYear();
+     var month = currentDate.getMonth() + 1;
+     var day = currentDate.getDate();
+     var validMonth;
+     var validDay;
+     if(day.toString().length == 1) {
+      	validDay = &quot;0&quot; + day;
+     } else {
+     	validDay = day;
+     }
+     if(month.toString().length == 1) {
+      	validMonth = &quot;0&quot; + month;
+     } else {
+     	validMonth = month;
+     }
+     return validDay + &quot;/&quot; + validMonth + &quot;/&quot; + year;
+}
+
+//##### Selenium WebDriver Reusable Methods ###
+
+function click(locatorType, locator) {
+	WDS.browser.findElement(locatorType(locator)).click();
+}
+
+function waitUntilVisibleThenMoveToElement(locatorType, locator) {
+	actions.moveToElement(wait.until(selenium.ExpectedConditions.visibilityOfElementLocated(locatorType(locator))));
+}
+
+function waitUntilElementVisibleThenSendKeys(locatorType, locator, text) {
+	wait.until(selenium.ExpectedConditions.visibilityOfElementLocated(locatorType(locator))).sendKeys(text);
+	WDS.log.info(&quot;Sent keys &apos;&quot; + text + &quot;&apos; to &quot; + locatorType(locator));
+}
+
+function waitUntilElementClickableThenClick(locatorType, locator) {
+	wait.until(selenium.ExpectedConditions.elementToBeClickable(locatorType(locator))).click();
+	WDS.log.info(locatorType(locator) + &quot; is clicked&quot;);
+}
+
+function waitUntilElementVisibleThenSelectOption(locatorType, locator, text) {
+	new select.Select(selenium.ExpectedConditions.visibilityOfElementLocated(locatorType(locator))).selectByVisibleText(text);
+	WDS.log.info(&quot;Option &apos;&quot; + text + &quot;&apos; selected in &quot; + locatorType(locator));
+}
+
+function waitUntilElementVisible(locatorType, locator) {
+	wait.until(selenium.ExpectedConditions.visibilityOfElementLocated(locatorType(locator)));
+	WDS.log.info(locatorType(locator) + &quot; is visible&quot;);
+}
+
+
+//##### JMeter/WebDriver Scripts #####
+
+WDS.sampleResult.sampleStart();
+WDS.browser.manage().deleteAllCookies();
+WDS.log.info(&quot;Sample Start - InvalidRegisterScenario&quot;);
+
+try {     
+	WDS.sampleResult.subSampleStart(&apos;Launch_&apos; + registerUrl);
+     WDS.browser.get(registerUrl);
+     waitUntilElementVisible(selenium.By.id, &quot;username&quot;);
+	WDS.sampleResult.subSampleEnd(true);
+	WDS.log.info(registerUrl + &quot; is launched&quot;);
+
+     // Register form
+     waitUntilElementVisibleThenSendKeys(selenium.By.id, &quot;username&quot;, &quot;test.user&quot;);
+     waitUntilElementVisibleThenSendKeys(selenium.By.name, &quot;firstName&quot;, &quot;Ricky&quot;);
+     waitUntilElementVisibleThenSendKeys(selenium.By.id, &quot;lastName&quot;, &quot;Ponting&quot;);
+     waitUntilElementVisibleThenSendKeys(selenium.By.id, &quot;password&quot;, &quot;NewPass2@&quot;);
+     waitUntilElementVisibleThenSendKeys(selenium.By.id, &quot;confirmPassword&quot;, &quot;NewPass2@&quot;);
+     
+     WDS.sampleResult.subSampleStart(&apos;InvalidRegisterScenario_Register&apos;);	
+	waitUntilElementClickableThenClick(selenium.By.xpath, &quot;//button[text()=&apos;Register&apos;]&quot;);
+	waitUntilElementVisible(selenium.By.xpath, &quot;//div[contains(text(),&apos;User already exists&apos;)]&quot;);	
+     WDS.sampleResult.subSampleEnd(true);
+}
+catch (error) {
+	WDS.log.error(error);
+	WDS.sampleResult.subSampleEnd(false);
+	//WDS.sampleResult.setResponseMessage(error);
+	throw error;
+}
+finally {
+	WDS.sampleResult.sampleEnd();
+}
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">javascript</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="LoginScenario" enabled="true">
+          <stringProp name="WebDriverSampler.script">//##### DYNAMIC VALUES FROM &apos;User Defined Variables&apos; #####
+var maxWaitTime = WDS.vars.get(&quot;MAX_WAIT_TIME&quot;);
+var loginUrl = WDS.vars.get(&quot;BASE_URL&quot;);
+var loginEmail = &quot;test.user&quot;;
+var loginPassword = &quot;Password1!&quot;;
+
+//##### Selenium WebDriver Imports #####
+var selenium = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui);
+var wait = new selenium.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(maxWaitTime));
+var select = JavaImporter(org.openqa.selenium.support.ui.Select);
+var actions = new org.openqa.selenium.interactions.Actions(WDS.browser);
+
+//##### JavaScript Reusable Methods #####
+
+function sleep(milliSeconds) {
+    var e = new Date().getTime() + (milliSeconds);
+    while (new Date().getTime() &lt;= e) {};
+}
+
+//##### Selenium WebDriver Reusable Methods ###
+
+function click(locatorType, locator) {
+	WDS.browser.findElement(locatorType(locator)).click();
+}
+
+function waitUntilVisibleThenMoveToElement(locatorType, locator) {
+	actions.moveToElement(wait.until(selenium.ExpectedConditions.visibilityOfElementLocated(locatorType(locator))));
+}
+
+function waitUntilElementVisibleThenSendKeys(locatorType, locator, text) {
+	wait.until(selenium.ExpectedConditions.visibilityOfElementLocated(locatorType(locator))).sendKeys(text);
+	WDS.log.info(&quot;Sent keys &apos;&quot; + text + &quot;&apos; to &quot; + locatorType(locator));
+}
+
+function waitUntilElementClickableThenClick(locatorType, locator) {
+	wait.until(selenium.ExpectedConditions.elementToBeClickable(locatorType(locator))).click();
+	WDS.log.info(locatorType(locator) + &quot; is clicked&quot;);
+}
+
+function waitUntilElementVisibleThenSelectOption(locatorType, locator, text) {
+	new select.Select(selenium.ExpectedConditions.visibilityOfElementLocated(locatorType(locator))).selectByVisibleText(text);
+	WDS.log.info(&quot;Option &apos;&quot; + text + &quot;&apos; selected in &quot; + locatorType(locator));
+}
+
+function waitUntilElementVisible(locatorType, locator) {
+	wait.until(selenium.ExpectedConditions.visibilityOfElementLocated(locatorType(locator)));
+	WDS.log.info(locatorType(locator) + &quot; is visible&quot;);
+}
+
+
+//##### JMeter/WebDriver Scripts #####
+
+WDS.sampleResult.sampleStart();
+WDS.browser.manage().deleteAllCookies();
+WDS.log.info(&quot;Sample Start - LoginScenario&quot;);
+
+try {	
+     WDS.sampleResult.subSampleStart(&apos;Launch_&apos; + loginUrl);
+     WDS.browser.get(loginUrl);
+     waitUntilElementVisible(selenium.By.xpath, &quot;//button[@type=&apos;submit&apos;]&quot;);
+	WDS.sampleResult.subSampleEnd(true);
+	WDS.log.info(loginUrl + &quot; is launched&quot;);
+	
+     // Log in
+     waitUntilElementVisibleThenSendKeys(selenium.By.name, &quot;login&quot;, loginEmail);
+     waitUntilElementVisibleThenSendKeys(selenium.By.name, &quot;password&quot;, loginPassword);
+
+     WDS.sampleResult.subSampleStart(&apos;LoginScenario_Login&apos;);
+     waitUntilElementClickableThenClick(selenium.By.xpath, &quot;//button[@type=&apos;submit&apos;]&quot;);
+     waitUntilElementVisible(selenium.By.xpath, &quot;//*[contains(text(),&apos;Ricky&apos;)]&quot;);	
+	WDS.sampleResult.subSampleEnd(true);
+
+     // Log out 
+     sleep(500);
+     
+     WDS.sampleResult.subSampleStart(&apos;LoginScenario_Logout&apos;);
+     waitUntilElementClickableThenClick(selenium.By.linkText, &quot;Logout&quot;);
+     waitUntilElementVisible(selenium.By.name, &quot;login&quot;);
+	WDS.sampleResult.subSampleEnd(true);
+}
+catch (error) {
+	WDS.log.error(error);
+	WDS.sampleResult.subSampleEnd(false);
+	//WDS.sampleResult.setResponseMessage(error);
+	throw error;
+}
+finally {
+	WDS.sampleResult.sampleEnd();
+}
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">javascript</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion" enabled="true">
+          <stringProp name="DurationAssertion.duration">3000</stringProp>
+          <stringProp name="Assertion.scope">children</stringProp>
+        </DurationAssertion>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
